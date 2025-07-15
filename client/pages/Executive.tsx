@@ -70,7 +70,7 @@ export default function Executive() {
       name: "Poojitha Yarra",
       role: "Publicity Lead",
       placeholder: "PY",
-      department: "CSE - Final Year",
+      department: "IT - Final Year",
       description: "Amplifying the club’s presence through creative campaigns and effective communication across all platforms",
     },
     {
@@ -98,7 +98,7 @@ export default function Executive() {
       name: "Renesh Reddy",
       role: "EB Member",
       placeholder: "RR",
-      department: "CSE - Final Year",
+      department: "IT - Final Year",
       description: "Playing a vital role in organizing events and fostering teamwork within the club.",
     },
 
