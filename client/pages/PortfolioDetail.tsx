@@ -332,7 +332,7 @@ const executiveLead = portfolioLeadRole ? getExecutiveByRole(portfolioLeadRole) 
       <footer className="py-12 px-4 border-t border-rhythms-gold/20 bg-rhythms-black/80">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-white/60 text-sm">
-            © 2024 Rhythms - GRIET Cultural Club. All rights reserved.
+            © 2025 Rhythms - GRIET Cultural Club. All rights reserved.
           </p>
         </div>
       </footer>
