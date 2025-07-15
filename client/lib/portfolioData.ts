@@ -91,10 +91,10 @@ export const portfolioLeads: Record<string, PortfolioLead> = {
       "4 years of technical expertise in sound engineering, lighting design, and software development.",
   },
   arts: {
-    name: "Sneha Joshi", // Using Treasury as Arts Lead since there's no specific Arts Lead in executive body
+    name: "Prasanna N", // Using Treasury as Arts Lead since there's no specific Arts Lead in executive body
     role: "Arts & Design Lead",
-    placeholder: "SJ",
-    department: "EEE - Final Year",
+    placeholder: "PN",
+    department: "CSE - Final Year",
     description: "Creating visual masterpieces and managing artistic resources",
     achievements: [
       "Curated 5 successful art exhibitions",
