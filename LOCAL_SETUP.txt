@@ -1,0 +1,326 @@
+================================================================================
+RHYTHMS CULTURAL CLUB WEBSITE - LOCAL DEVELOPMENT SETUP GUIDE
+================================================================================
+
+This guide will help you set up and run the Rhythms website on your local machine.
+
+================================================================================
+📋 PREREQUISITES
+================================================================================
+
+Before starting, ensure you have the following installed:
+
+1. Node.js (Version 18 or higher)
+   - Download from: https://nodejs.org/
+   - Check version: node --version
+
+2. npm (Usually comes with Node.js)
+   - Check version: npm --version
+
+3. Git (For version control)
+   - Download from: https://git-scm.com/
+   - Check version: git --version
+
+4. Code Editor (Recommended)
+   - Visual Studio Code: https://code.visualstudio.com/
+   - Or any editor of your choice
+
+================================================================================
+🚀 INSTALLATION & SETUP
+================================================================================
+
+Step 1: Clone or Download the Project
+--------------------------------------
+If you have the project files:
+- Extract the ZIP file to your desired location
+- Open terminal/command prompt in the project folder
+
+If using Git:
+git clone [YOUR_REPOSITORY_URL]
+cd rhythms-website
+
+Step 2: Install Dependencies
+----------------------------
+Open terminal in the project root directory and run:
+
+npm install
+
+This will install all required packages including:
+- React 18
+- TypeScript
+- Vite (Build tool)
+- TailwindCSS
+- React Router
+- UI Components
+- And other dependencies
+
+Step 3: Verify Installation
+---------------------------
+Check if installation was successful:
+
+npm run typecheck
+
+This should complete without errors.
+
+================================================================================
+▶️ RUNNING THE APPLICATION
+================================================================================
+
+Development Server
+------------------
+To start the development server:
+
+npm run dev
+
+This will:
+- Start the frontend React app
+- Start the backend Express server  
+- Enable hot reloading (automatic updates when you save files)
+- Open the website at: http://localhost:8080
+
+You should see output like:
+
+> dev
+> vite
+
+  Local:   http://localhost:8080/
+  Network: use --host to expose
+```
+
+Building for Production
+-----------------------
+To create a production build:
+
+npm run build
+
+This creates optimized files in the 'dist' folder.
+
+To test the production build:
+
+npm run start
+
+Running Tests
+-------------
+To run the test suite:
+
+npm test
+
+Type Checking
+-------------
+To check TypeScript types:
+
+npm run typecheck
+
+Code Formatting
+---------------
+To format code (if available):
+
+npm run format.fix
+
+================================================================================
+🌐 ACCESSING THE WEBSITE
+================================================================================
+
+Once the server is running:
+
+1. Open your web browser
+2. Navigate to: http://localhost:8080
+3. You should see the Rhythms homepage
+
+Available Pages:
+- Home: http://localhost:8080/
+- Portfolios: http://localhost:8080/portfolios
+- Portfolio Details: http://localhost:8080/portfolio/[portfolio-id]
+- Executive Body: http://localhost:8080/executive
+- Gallery: http://localhost:8080/gallery
+
+================================================================================
+📁 PROJECT STRUCTURE
+================================================================================
+
+rhythms-website/
+├── client/                 # Frontend React application
+│   ├── components/         # Reusable UI components
+│   │   ├── ui/            # Base UI components (buttons, cards, etc.)
+│   │   └── Navbar.tsx     # Navigation component
+│   ├── lib/               # Utility functions and data
+│   │   ├── imageManager.ts # Image management system
+│   │   ├── portfolioData.ts # Portfolio information
+│   │   └── utils.ts       # Helper functions
+│   ├── pages/             # Page components
+│   │   ├── Home.tsx       # Homepage
+│   │   ├── Portfolios.tsx # Portfolios overview
+│   │   ├── PortfolioDetail.tsx # Individual portfolio pages
+│   │   ├── Executive.tsx  # Executive body page
+│   │   ├── Gallery.tsx    # Gallery page
+│   │   └── NotFound.tsx   # 404 page
+│   ├── App.tsx            # Main app component with routing
+│   └── global.css         # Global styles and theme
+├── server/                # Backend Express server
+│   ├── routes/           # API route handlers
+│   └── index.ts          # Server configuration
+├── shared/               # Shared types and interfaces
+├── package.json          # Dependencies and scripts
+├── tailwind.config.ts    # TailwindCSS configuration
+├── tsconfig.json         # TypeScript configuration
+└── vite.config.ts        # Vite build configuration
+
+================================================================================
+🔧 DEVELOPMENT WORKFLOW
+================================================================================
+
+Daily Development:
+1. Start the development server: npm run dev
+2. Make your changes to files in the 'client' folder
+3. Save files - changes appear automatically in browser
+4. Check for TypeScript errors: npm run typecheck
+5. Test your changes in the browser
+
+Making Changes:
+- Edit React components in 'client/pages/' for page content
+- Update images in 'client/lib/imageManager.ts'
+- Modify styles in component files or 'client/global.css'
+- Add new routes in 'client/App.tsx'
+
+================================================================================
+🎨 CUSTOMIZATION GUIDE
+================================================================================
+
+Updating Images:
+- See README.md for detailed image management instructions
+- Main file: client/lib/imageManager.ts
+
+Changing Colors/Theme:
+- Edit: client/global.css (CSS variables)
+- Edit: tailwind.config.ts (Tailwind theme)
+
+Adding New Pages:
+1. Create new component in 'client/pages/'
+2. Add route in 'client/App.tsx'
+3. Update navigation in 'client/components/Navbar.tsx'
+
+Modifying Content:
+- Executive member info: client/lib/portfolioData.ts
+- Portfolio details: client/lib/portfolioData.ts
+- Page content: Edit respective files in client/pages/
+
+================================================================================
+🐛 TROUBLESHOOTING
+================================================================================
+
+Common Issues and Solutions:
+
+1. "Command not found: npm"
+   Solution: Install Node.js from nodejs.org
+
+2. "Cannot find module" errors
+   Solution: Run 'npm install' to install dependencies
+
+3. Port 8080 already in use
+   Solution: Kill the process using port 8080 or change port in vite.config.ts
+
+4. TypeScript errors
+   Solution: Run 'npm run typecheck' to see detailed errors
+
+5. Changes not showing in browser
+   Solution: Hard refresh (Ctrl+F5) or clear browser cache
+
+6. Build fails
+   Solution: Check for TypeScript errors with 'npm run typecheck'
+
+Checking Logs:
+- Development server logs appear in the terminal
+- Browser console (F12) shows frontend errors
+- Network tab shows failed requests
+
+================================================================================
+📱 TESTING ON DIFFERENT DEVICES
+================================================================================
+
+Desktop Testing:
+- Resize browser window to test responsiveness
+- Test in Chrome, Firefox, Safari, Edge
+
+Mobile Testing:
+- Use browser dev tools (F12 > Device Toolbar)
+- Test on actual mobile devices on same network
+- Access via: http://[YOUR_IP]:8080
+
+Network Testing:
+- Find your IP: ipconfig (Windows) or ifconfig (Mac/Linux)
+- Others on same network can access: http://[YOUR_IP]:8080
+
+================================================================================
+🚀 DEPLOYMENT PREPARATION
+================================================================================
+
+Before deploying to production:
+
+1. Run production build:
+   npm run build
+
+2. Test production build locally:
+   npm run start
+
+3. Check all pages work correctly
+4. Verify all images load properly
+5. Test on different devices/browsers
+
+The website is ready for deployment to:
+- Netlify (recommended for static sites)
+- Vercel
+- GitHub Pages
+- Any static hosting service
+
+================================================================================
+💡 PERFORMANCE TIPS
+================================================================================
+
+For Better Development Experience:
+- Close unnecessary applications to free up memory
+- Use Chrome DevTools to debug issues
+- Enable auto-save in your code editor
+- Use multiple terminal tabs for different commands
+
+For Better Website Performance:
+- Optimize images before adding them
+- Test on slower internet connections
+- Monitor browser console for errors
+- Keep dependencies up to date
+
+================================================================================
+🆘 GETTING HELP
+================================================================================
+
+If you encounter issues:
+
+1. Check the terminal output for error messages
+2. Look in browser console (F12) for frontend errors
+3. Verify all files are saved and in correct locations
+4. Try restarting the development server (Ctrl+C, then npm run dev)
+5. Clear browser cache and try again
+
+Quick Commands Reference:
+- Start development: npm run dev
+- Build for production: npm run build
+- Run tests: npm test
+- Check types: npm run typecheck
+- Stop server: Ctrl+C (in terminal)
+
+================================================================================
+✅ SUCCESS CHECKLIST
+================================================================================
+
+Setup Complete When:
+□ npm install runs without errors
+□ npm run dev starts successfully
+□ Website opens at http://localhost:8080
+□ All pages load correctly
+□ Images display properly
+□ Navigation works between pages
+□ No console errors in browser
+□ Hot reloading works (changes appear when saving files)
+
+Your Rhythms website is now ready for development! 🎉
+
+================================================================================
