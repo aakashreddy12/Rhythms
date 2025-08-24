@@ -54,7 +54,7 @@ export const executiveBodyData: ExecutiveMember[] = [
     name: 'Sujith Kumar',
     role: 'Event Lead',
     portfolio: 'Team Invincibles',
-    description: 'Choreographing movements that tell stories and touch hearts.',
+    description: 'Executing events from start to finish.',
     icon: 'Sparkles',
     image: '/assets/images/profile-photos/event-management-lead.jpeg',
     gradient: 'from-gold-500 to-gold-800',
